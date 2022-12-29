@@ -1,0 +1,17 @@
+body{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+h1{
+    background-color: aqua;
+    padding-bottom: 50px;
+   
+    
+}
+.form{
+    float: right;
+
+}

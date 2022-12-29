@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum11</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-md-8"><h1>105220023_M Tijan Abdurrahman</h1>
+
+            <form name="datapribadi" method="post" action="connect.php">
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Nama</label><br>
+          <input type="text" class="form-control" name="nama" id="nama" placeholder="Nama Lengkap"><br><br>
+          <label for="exampleFormControlInput1">Email</label><br>
+          <input type="email" class="form-control" name="email" id="email" placeholder="Email"><br><br>
+          <label for="exampleFormControlInput1">Addres</label><br>
+          <input type="email" class="form-control" name="address" id="address" placeholder="Address"><br><br>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Jenis Kelamin</label><br>
+          <select class="form-control" name="gender" id="gender">
+            <option>Pria</option>
+            <option>Wanita</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Position</label><br>
+          <input type="email" class="form-control" name="position" id="position" placeholder="Position"><br><br>
+          <label for="exampleFormControlInput1">Status</label><br>
+          <input type="email" class="form-control" name="status" id="status" placeholder="status"><br><br>
+        </div>
+
+        
+          
+          <button type="submit" onClick='inputdata()' class="btn btn-success">Simpan</button>
+          <button type="reset" class="btn btn-warning">Batal</button>
+        </div><br>
+        <div class="row">
+          <table class="table" id="databel" border="1">
+            <thead>
+              <tr>
+                <th scope="col">Nama</th>
+                <th scope="col">Email</th>
+                <th scope="col"></th>
+                <th scope="col">Alamat</th>
+              </tr>
+            </thead>
+          </table>  
+        </div>
+      </form>
+
+          </div>          
+          <div class="col-md-2"></div>
+        </div>
+      </div>
+</body>
+</html>
