@@ -23,14 +23,15 @@ document.getElementById('search').addEventListener('click',(e)=>{
     cardContainer.innerHTML = '';
     let datArr = dat.artists.items
     for(let i = 0;i<datArr.length;i++){
-      // console.log(datArr[i].data)
+      console.log(datArr[i].data)
       
       cardContainer.innerHTML += `
                       <div class="card">
 
                           <div class="img">
                             <img height="200px" width="200px" src="${datArr[i].data.visuals.avatarImage.sources[0].url}" alt="">
-                          </div>
+                            <h3>${datArr[i].data.profile.name}</h3>
+                            </div>
                           
                         <div class="description">
                             <h3></h3>
