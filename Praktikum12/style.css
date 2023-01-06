@@ -8,11 +8,6 @@
     color: aliceblue;
 }
 
-footer {
-    text-align: center;
-    margin-left: 20px;
-}
-
 form {
     background-color: rgb(135, 95, 95);
     width: fit-content;
@@ -48,9 +43,13 @@ form button {
     grid-template-columns: 33.33% 33.33% 33.33%;
     align-content: center;
 }
+.card-section .card {
+    width: fit-content;
+    margin: 0 auto 100px auto;
+    padding: 20px;
+    padding-bottom: 35px;
 
-
-
+}
 .description a {
     background-color: rgb(9, 128, 255);
     color: white;

@@ -10,7 +10,7 @@ const options = {
 
 document.getElementById('search').addEventListener('click',(e)=>{
   e.preventDefault();
-  let endpoint = `https://spotify23.p.rapidapi.com/search/?q=${input.value}&type=artists&offset=0&limit=3&numberOfTopResults=5`;
+  let endpoint = `https://spotify23.p.rapidapi.com/search/?q=${input.value}&type=artists&offset=0&limit=6&numberOfTopResults=5`;
 
   fetch(endpoint, options)
 	.then(response => response.json())
@@ -23,10 +23,15 @@ document.getElementById('search').addEventListener('click',(e)=>{
     cardContainer.innerHTML = '';
     let datArr = dat.artists.items
     for(let i = 0;i<datArr.length;i++){
-      console.log(datArr[i].data)
+      // console.log(datArr[i].data)
       
       cardContainer.innerHTML += `
-                   
+                      <div class="card">
+
+                          <div class="img">
+                            <img height="200px" width="200px" src="${datArr[i].data.visuals.avatarImage.sources[0].url}" alt="">
+                          </div>
+                          
                         <div class="description">
                             <h3></h3>
                             <a href="${datArr[i].data.uri}" target="_blank">Link to the song</a>
