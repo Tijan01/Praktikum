@@ -1,4 +1,5 @@
-
+let input = document.getElementById('search-input');
+let cardContainer = document.getElementById('card-section')
 const options = {
 	method: 'GET',
 	headers: {
@@ -7,7 +8,69 @@ const options = {
 	}
 };
 
-fetch('https://spotify23.p.rapidapi.com/search/?q=%3CREQUIRED%3E&type=multi&offset=0&limit=10&numberOfTopResults=5', options)
+document.getElementById('search').addEventListener('click',(e)=>{
+  e.preventDefault();
+  let endpoint = `https://spotify23.p.rapidapi.com/search/?q=${input.value}&type=artists&offset=0&limit=3&numberOfTopResults=5`;
+
+  fetch(endpoint, options)
 	.then(response => response.json())
-	.then(response => console.log(response))
-	.catch(err => console.error(err));
+	.then(dat => {
+    // console.log(data.tracks.items)
+    // let dataArr = artists.items
+    // console.log(dat.artists.items[0].data)
+    
+    let j
+    cardContainer.innerHTML = '';
+    let datArr = dat.artists.items
+    for(let i = 0;i<datArr.length;i++){
+      console.log(datArr[i].data)
+      
+      cardContainer.innerHTML += `
+                   
+                        <div class="description">
+                            <h3></h3>
+                            <a href="${datArr[i].data.uri}" target="_blank">Link to the song</a>
+                        </div>
+                    </div>
+                `;
+      
+    }
+    
+    // let itemsArr 
+
+    // datArr.forEach(element => {
+    //   let i
+    //   console.log(elemen.artists)
+    // });
+
+    
+    // cardContainer.innerHTML = '';
+    //   cardContainer.innerHTML += `
+                   
+    //                     <div class="description">
+    //                         <h3></h3>
+    //                         <a href="${dat.artists.items[0].data.uri}" target="_blank">Link to the song</a>
+    //                     </div>
+    //                 </div>
+    //             `;
+      
+    
+    // let dataArr = data.artists.items
+
+
+    // for (let i =0; i<1; i++){
+    //   console.log(dataArr[i])
+    // }
+    
+  })
+	function getStuff() { 
+    return fetchStuff().then(stuff => 
+      process(stuff)
+    ).catch(err => {
+      console.error(err);
+    });
+  }
+  // .catch(err => console.log(err))
+
+})
+

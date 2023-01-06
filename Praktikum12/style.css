@@ -1,0 +1,62 @@
+* {
+    font-family: sans-serif;
+    align-items: center;
+
+}
+.text{
+    text-align: center;
+    color: aliceblue;
+}
+
+footer {
+    text-align: center;
+    margin-left: 20px;
+}
+
+form {
+    background-color: rgb(135, 95, 95);
+    width: fit-content;
+    margin: 0 auto 0 auto;
+    padding: 30px;
+    border-radius: 4px;
+}
+
+form input {
+    padding: 10px;
+    width: 300px;
+}
+
+form button {
+    padding: 8px;
+    margin-top: 10px; 
+    color: white;
+    background-color: rgb(9, 128, 255);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.button{
+    display: grid;
+    align-items: center;
+    align-content: center;
+}
+
+.card-section {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    align-content: center;
+}
+
+
+
+.description a {
+    background-color: rgb(9, 128, 255);
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display:flexbox;
+    text-align: center;
+}
+
